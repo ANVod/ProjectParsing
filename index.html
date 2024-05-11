@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Мир Хрюшек</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <p class="first">Это мой первый сайт!</p>
+    <p class="first">Это мой первый сайт!</p>
+    <p>Это мой первый сайт!</p>
+    <p>Это мой первый сайт!</p>
+    <p id="test">Это мой первый сайт!</p>
+    <header>
+        <h1>Добро пожаловать в мир хрюшек!</h1>
+    </header>
+    <section class="gallery">
+        <h2>Галерея хрюшек</h2>
+        <img src="pig1.jpg" alt="Хрюшка 1">
+        <img src="pig2.jpg" alt="Хрюшка 2">
+        <img src="pig3.jpg" alt="Хрюшка 3">
+    </section>
+    <footer>
+        <p>© 2023 Мир Хрюшек. Все права защищены.</p>
+    </footer>
+</body>
+</html>
+```
+
+Теперь создадим файл CSS для стилизации нашего сайта. Этот файл можно назвать `styles.css`:
+
+```css
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f9caca;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    color: #5a2328;
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+footer {
+    background-color: #f9caca;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    color: #5a2328;
+}
+``
