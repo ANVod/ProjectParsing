@@ -1,7 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-from googletrans import Translator
-
+from deep_translator import GoogleTranslator
 
 def get_english_words():
     url = "https://randomword.com/"
@@ -24,16 +23,13 @@ def get_english_words():
         print("Ошибка парсинга:", e)
         return None
 
-
 def translate_to_russian(text):
-    translator = Translator()
     try:
-        translation = translator.translate(text, src='en', dest='ru')
-        return translation.text
+        translation = GoogleTranslator(source='en', target='ru').translate(text)
+        return translation
     except Exception as e:
         print("Ошибка перевода:", e)
         return None
-
 
 def word_game():
     print("Добро пожаловать в игру 'Слова'")
@@ -65,7 +61,6 @@ def word_game():
         if play_again.lower() != "y":
             print("Спасибо за игру!")
             break
-
 
 if __name__ == "__main__":
     word_game()
