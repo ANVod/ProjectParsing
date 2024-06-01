@@ -43,21 +43,21 @@ def play_game(rounds=5):
             english_word = result['english_word']
             translated_word = translate_to_russian(english_word)
             if translated_word:
-                print(f"Try to translate the word: {english_word}")
-                user_translation = input("Your translation: ").strip()
+                print(f"Попробуйте перевести слово: {english_word}")
+                user_translation = input("Ваш перевод: ").strip()
 
                 if user_translation.lower() == translated_word.lower():
-                    print("Correct!")
+                    print("Правильно!")
                     score += 1
                 else:
-                    print(f"Wrong! The correct translation is: {translated_word}")
+                    print(f"Неправильно! Правильный перевод: {translated_word}")
             else:
-                print("Failed to get the translation.")
+                print("Не удалось получить перевод.")
         else:
-            print("Failed to get a new word.")
+            print("Не удалось получить новое слово.")
 
-    print(f"Game over! Your score: {score}/{rounds}")
+    print(f"Игра окончена! Ваш счёт: {score}/{rounds}")
 
 if __name__ == "__main__":
-    print("Welcome to the translation game!")
+    print("Добро пожаловать в игру на перевод!")
     play_game()
