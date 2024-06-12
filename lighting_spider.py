@@ -21,3 +21,7 @@ class LightingSpider(scrapy.Spider):
         next_page = response.css('a.next::attr(href)').get() # Селектор для ссылки на следующую страницу
         if next_page: # Если есть следующая страница
             yield scrapy.Request(response.urljoin(next_page), self.parse) # Переход на следующую страницу
+
+#Запуск паука по команде в терминале: scrapy crawl lighting
+
+
